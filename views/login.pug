@@ -1,0 +1,36 @@
+html
+head
+  link(rel='stylesheet', href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css")
+  link(rel='stylesheet', href='	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js')
+  
+  style
+   include css/login.css
+ 
+header
+  nav.navbar
+    .container-fluid
+      a(href='/robit.png')
+        img(src="https://www.robit.com.tr/wp-content/uploads/2021/04/logo-new-dark.png" alt='robit', width='316', height='151')
+br
+.container(style='text-align: center; width: 390px; height: 425px;')
+  .row.p-1
+    .col-sm-4(style='text-align: right;')
+      span Kullan&imath;c&imath; Ad&imath;:
+    .col-sm-8
+      input.Textbox(type='text', title='Kullanıcı Adı', autocomplete='off', style='margin-right:150px;')
+  .row.p-1
+    .col-sm-4(style='text-align: right;')
+      span &Scedil;ifre:
+    .col-sm-8
+      input.Textbox(type='password', title='Şifre', autocomplete='off', style='margin-right:150px;')
+  .row.p-1
+  .container-fluid(style='text-align: center;')
+    input#buton.btn.btn-secondary(type='submit', value='Giriş')
+br
+footer.border-top.footer.text-muted
+  .container-fluid(style='text-align:center ;')
+    br
+    |             &copy; 2022 - RobitTeknoloji - Privacy
+script
+  include js/login.js
+  

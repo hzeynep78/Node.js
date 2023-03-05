@@ -1,0 +1,37 @@
+html
+head
+  link(rel='stylesheet', href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css")
+  link(rel='stylesheet', href='	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js')
+style
+  include css/layout.css
+header(style='height: 200px;')
+  nav.navbar.navbar-expand-sm
+    .container-fluid
+      a(href="/robit.png")
+        img(src='https://www.robit.com.tr/wp-content/uploads/2021/04/logo-new-dark.png', alt='robit', width='180', height='97')
+      .collapse.navbar-collapse.justify-content-end
+       ul.navbar-nav
+          li.nav-item
+            a.nav-link.text-dark(asp-area='', asp-controller='D', href='index.pug', style='margin-right: 0px;background-color:red; border: 1px solid black;font-size: 25px;') D
+          li.nav-item
+            a.nav-link.text-dark(asp-area='', asp-controller='S', href='layout.pug', style='background-color:red; border: 1px solid black;margin-right:50px;font-size: 25px;') S
+
+.container(style='height: 425px; border: 1px solid black;background-color: #b30000; width: 425px')
+  .container(style='text-align: center; width: 202px; margin-top: 100px;')
+    p
+      input(type='textbox', placeholder='URL', size='20')
+    p
+      input(type="(textbox)", placeholder="TOPIC", size="20" style="margin-bottom: 5px;")
+  
+    button.btn.btn-dark(type='button' style="margin-right: 5px;" onclick='kaydetFunction()') kaydet
+    button.btn.btn-dark(type='button' onclick='gonderFunction()') gönder
+
+
+footer.border-top.footer.text-muted
+  .container-fluid(style='text-align:center ;')
+    br
+    |  &copy; 2022 - RobitTeknoloji - Privacy
+
+  script
+   include js/layout.js
+  
